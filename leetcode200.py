@@ -23,5 +23,3 @@ class Solution:
                     self.dfs(i,j,n,m,grid)
                     sum += 1
         return sum
-test = Solution()
-print(test.numIslands([]))
