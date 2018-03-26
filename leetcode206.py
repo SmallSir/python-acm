@@ -10,8 +10,13 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
-        l = ListNode(0)
-        p = head
-        while p:
-            k = p.next
-            
+        if head is None or head.next is None:
+            return head
+        l = None
+        p = ListNode()
+        while head:
+            k = head.next
+            head = head.next
+            k.next = l
+            l = l.next
+        return l
